@@ -1,30 +1,22 @@
 import { Button, Container, Row, Col } from "react-bootstrap";
+import React from "react";
+import { Link } from "react-router-dom";
+import "./AddTodo.css"
 
-import { useState } from "react";
-
-export default function AddTask({ onAddTask }) {
-  const [text, setText] = useState("");
+export default function AddTodo() {
   return (
     <>
-      <Container className="d-flex justify-content-between ">
+      <Container className="d-flex justify-content-between  ">
         <Row>
           <Col className="d-grid gap-2 ">
-            <input
-              placeholder="Add Todo"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-            />
+            <input placeholder="Search" />
             <Button>Search</Button>
           </Col>
         </Row>
         <Row>
-          <Col className="d-flex">
-            <Button
-              onClick={() => {
-                setText("");
-                onAddTask(text);
-              }}
-            >
+          <Col className="d-grid gap-2">
+            <br />
+            <Button className="AddTodo" as={Link} to="/add">
               Add
             </Button>
           </Col>

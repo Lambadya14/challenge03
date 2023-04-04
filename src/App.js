@@ -1,15 +1,14 @@
 import "./App.css";
-import AddTask from "./components/AddTodo";
-import TaskApp from "./components/Todo";
+import Todo from "./components/Todo";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import TodoInput from "./components/TodoInput";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<TaskApp />} />
-          <Route element={<AddTask />} />
+          <Route path="/" element={<Todo />} />
+          <Route path="/add" element={<TodoInput />} />
         </Routes>
       </BrowserRouter>
     </>
