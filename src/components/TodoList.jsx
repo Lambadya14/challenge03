@@ -7,7 +7,7 @@ function TodoList({ tasks, onChangeTask, onDeleteTask }) {
       <ul className="list-group">
         {tasks.map((task) => (
           <li
-            key={task.name}
+            key={task.id}
             className="list-unstyled d-flex mb-2 border rounded-1 p-2"
           >
             <TodoButton
