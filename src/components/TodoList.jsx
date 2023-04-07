@@ -12,8 +12,8 @@ function TodoList({ tasks, onChangeTask, onDeleteTask }) {
           >
             <TodoButton
               task={task}
-              onChange={onChangeTask}
-              onDelete={onDeleteTask}
+              onChange={()=>onChangeTask}
+              onDelete={()=>onDeleteTask}
             />
           </li>
         ))}
