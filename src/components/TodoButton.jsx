@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container } from "react-bootstrap";
-
+import { BsFillPencilFill } from "react-icons/bs";
+import { BsTrashFill } from "react-icons/bs";
 
 function TodoButton({ task, onChange, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -35,8 +36,8 @@ function TodoButton({ task, onChange, onDelete }) {
               });
             }}
           />
-          <Button onClick={() => setIsEditing(true)}>Edit</Button>
-          <Button onClick={() => onDelete(task.id)}>Delete</Button>
+          <BsFillPencilFill onClick={() => setIsEditing(true)} />
+          <BsTrashFill onClick={() => onDelete(task.id)} />
         </div>
       </>
     );
