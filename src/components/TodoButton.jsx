@@ -36,7 +36,8 @@ function TodoButton({ task, onChange, onDelete }) {
               });
             }}
           />
-          <BsFillPencilFill  className="text-primary"
+          <BsFillPencilFill
+            className="text-primary"
             onClick={() => setIsEditing(true)}
           />
           <BsTrashFill
