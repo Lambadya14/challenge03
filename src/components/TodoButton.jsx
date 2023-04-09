@@ -40,10 +40,7 @@ function TodoButton({ task, onChange, onDelete }) {
               });
             }}
           />
-          <BsFillPencilFill
-            className="text-primary"
-            onClick={() => setIsEditing(true)}
-          />
+          <BsFillPencilFill onClick={() => setIsEditing(true)} />
           <BsTrashFill
             style={{ color: "red" }}
             onClick={() => onDelete(task.id)}
