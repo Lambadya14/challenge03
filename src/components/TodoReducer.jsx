@@ -25,7 +25,7 @@ function TodoReducer(tasks, action) {
     case "deletedAllTask": {
       return tasks.map((t) => {
         if (t) {
-          return tasks.splice((t) => t.id !== action.id);
+          return tasks.splice(0, tasks.length);
         } else {
           return t;
         }
@@ -35,7 +35,7 @@ function TodoReducer(tasks, action) {
     case "deletedDoneTask": {
       return tasks.map((t) => {
         if (t.complete === true) {
-          return tasks.filter((t) => t.id !== action.id);
+          return tasks.filter((t) => t.complete && action.complete === true);
         } else {
           return t;
         }

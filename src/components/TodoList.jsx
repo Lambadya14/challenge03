@@ -3,7 +3,7 @@ import TodoButton from "./TodoButton";
 
 function TodoList({ tasks, onChangeTask, onDeleteTask }) {
   return (
-    <React.Fragment>
+    <>
       <ul className="list-group">
         {tasks.map((task) => (
           <li
@@ -18,7 +18,7 @@ function TodoList({ tasks, onChangeTask, onDeleteTask }) {
           </li>
         ))}
       </ul>
-    </React.Fragment>
+    </>
   );
 }
 export default TodoList;

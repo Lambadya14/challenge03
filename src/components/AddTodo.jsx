@@ -6,7 +6,7 @@ import "./AddTodo.css"
 export default function AddTodo() {
   return (
     <>
-      <Container className="d-flex justify-content-between  ">
+      <Container className="d-flex flex-grid justify-content-between  ">
         <Row>
           <Col className="d-grid gap-2 ">
             <input placeholder="Search" />

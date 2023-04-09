@@ -24,7 +24,11 @@ function TodoButton({ task, onChange, onDelete }) {
   } else {
     taskContent = (
       <>
-        {task.task}
+        {task.complete ? (
+          <strike>{task.task}</strike>
+        ) : (
+          <span>{task.task}</span>
+        )}
         <div className="d-flex gap-3">
           <input
             type="checkbox"
